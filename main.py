@@ -61,7 +61,10 @@ def check_hand(hand):
 		return 100000000 * base_score
 	if pair:
 		base_score = rankings[card_2[0]]
-		return (1000000 * base_score) + max(rankings[card_1[0]], rankings[card_3[0]])
+		if rankings[card_3[0]] != rankings[card_2[0]]:
+			return (1000000 * base_score) + rankings[card_3[0]]
+		else:
+			return (1000000 * base_score) + rankings[card_1[0]]
 
 	base_score = (10000 * rankings[card_3[0]]) + (100 * rankings[card_2[0]]) + (1 * rankings[card_1[0]])
 	return base_score
