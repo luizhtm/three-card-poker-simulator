@@ -103,11 +103,17 @@ if __name__ == '__main__':
 	print("Starting balance is: ${balance}".format(balance=balance))
 	print("Number of games: {n_of_games}".format(n_of_games=n_of_games))
 
+	# Cria uma 'pool' com o número de processadores que tem na máquina.
 	pool = multiprocessing.Pool(multiprocessing.cpu_count())
+
+	# Faz cada uma das cpus executarem um jogo, 
+	# e o resultado de cada jogo é guardado no vetor results.
 	results = pool.map(play_single_game, range(n_of_games))
 
+	# Fecha a pool
 	pool.close()
 
+	# Verifica cada resultado de maneira serial e contabiliza os resultados dos jogos.
 	for result in results:
 		if result == 'fold':
 			balance -= bet
