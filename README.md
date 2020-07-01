@@ -1,2 +1,11 @@
 # three-card-poker-simulator
-Short python script that simulates a person playing optimal strategy in the casino game Three Card Poker
+
+## Como rodar
+
+Basta ter Python3 instalado e configurado na sua máquina. Daí é só rodar:
+
+```python3 main_paralelo.py```
+
+ou
+
+```python3 main.py```
