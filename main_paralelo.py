@@ -97,13 +97,13 @@ def play_single_game(i):
 
 if __name__ == '__main__':
 	balance = 100000
-	n_of_games = 1000000
+	n_of_games = 100000
 	bet = 1
 
 	print("Starting balance is: ${balance}".format(balance=balance))
 	print("Number of games: {n_of_games}".format(n_of_games=n_of_games))
 
-	# Cria uma 'pool' com o número de processadores que tem na máquina.
+	# Cria uma 'pool' com o número de threads que tem na máquina.
 	pool = multiprocessing.Pool(multiprocessing.cpu_count())
 
 	# Faz cada uma das cpus executarem um jogo, 

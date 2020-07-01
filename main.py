@@ -71,7 +71,7 @@ def check_hand(hand):
 
 if __name__ == '__main__':
 	balance = 100000
-	n_of_games = 1000000
+	n_of_games = 10000000
 	bet = 1
 
 	print("Starting balance is: ${balance}".format(balance=balance))
