@@ -49,7 +49,7 @@ def check_hand(hand):
 	straight = rankings[card_3[0]] == rankings[card_2[0]] + 1 and rankings[card_2[0]] == rankings[card_1[0]] + 1
 	three_of_a_kind = card_1[0] == card_2[0] == card_3[0]
 	flush = card_1[1] == card_2[1] == card_3[1]
-	pair = card_1[0] == card_2[0] or card_2[0] == card_3[0]
+	pair = card_1[0] == card_2[0] or card_2[0] == card_3[0] or card_1[0] == card_3[0]
 
 	base_score = rankings[card_3[0]]
 	if straight and flush:
